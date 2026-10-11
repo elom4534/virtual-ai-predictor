@@ -12,6 +12,21 @@ from models_ml import VirtualAIEnsemblePredictor
 # Real Competitions from 1xBet / BetWinner feed (October 2026)
 EXACT_BOOKMAKER_COMPETITIONS = [
     {
+        "name": "FC 26. Germany Championship",
+        "flag": "🇩🇪",
+        "format_tag": "SIM",
+        "game_format": "FC 26. Simulation 11v11 (8 min)",
+        "teams": [
+            "Bayern Munich Cyber", "Borussia Dortmund Cyber", "Bayer Leverkusen Cyber",
+            "RB Leipzig Cyber", "VfB Stuttgart Cyber", "Eintracht Frankfurt Cyber",
+            "VfL Wolfsburg Cyber", "Werder Bremen Cyber", "Borussia Monchengladbach Cyber",
+            "SC Freiburg Cyber", "Union Berlin Cyber", "1. FC Koln Cyber",
+            "TSG Hoffenheim Cyber", "FC Augsburg Cyber", "FSV Mainz 05 Cyber", "Schalke 04 Cyber"
+        ],
+        "avg_goals": 3.3,
+        "duration_min": 8
+    },
+    {
         "name": "FC 26. 5x5 Rush. Superligue",
         "flag": "🌍",
         "format_tag": "RUSH",
@@ -50,18 +65,6 @@ EXACT_BOOKMAKER_COMPETITIONS = [
         "duration_min": 6
     },
     {
-        "name": "FC 26. England Championship",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "format_tag": "SIM",
-        "game_format": "FC 26. Simulation 11v11 (8 min)",
-        "teams": [
-            "Leeds Cyber", "Leicester Cyber", "Southampton Cyber",
-            "Ipswich Cyber", "West Brom Cyber", "Norwich Cyber", "Nottingham Forest Cyber"
-        ],
-        "avg_goals": 2.8,
-        "duration_min": 8
-    },
-    {
         "name": "FC 26. Champions League",
         "flag": "🇪🇺",
         "format_tag": "SIM",
@@ -75,19 +78,6 @@ EXACT_BOOKMAKER_COMPETITIONS = [
         "duration_min": 8
     },
     {
-        "name": "FC 26. Championnat du monde",
-        "flag": "🌍",
-        "format_tag": "SIM",
-        "game_format": "FC 26. Simulation 11v11 (8 min)",
-        "teams": [
-            "France Cyber", "Brazil Cyber", "Argentina Cyber",
-            "England Cyber", "Germany Cyber", "Spain Cyber",
-            "Portugal Cyber", "Italy Cyber", "Netherlands Cyber", "Belgium Cyber"
-        ],
-        "avg_goals": 2.9,
-        "duration_min": 8
-    },
-    {
         "name": "England. Premier League. Simulation",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "format_tag": "SIM",
@@ -95,9 +85,45 @@ EXACT_BOOKMAKER_COMPETITIONS = [
         "teams": [
             "Manchester City Cyber", "Arsenal Cyber", "Liverpool Cyber",
             "Chelsea Cyber", "Manchester United Cyber", "Tottenham Cyber",
-            "Newcastle Cyber", "Aston Villa Cyber"
+            "Newcastle Cyber", "Aston Villa Cyber", "West Ham Cyber", "Brighton Cyber"
         ],
         "avg_goals": 2.7,
+        "duration_min": 8
+    },
+    {
+        "name": "FC 26. England Championship",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "format_tag": "SIM",
+        "game_format": "FC 26. Simulation 11v11 (8 min)",
+        "teams": [
+            "Leeds Cyber", "Leicester Cyber", "Southampton Cyber",
+            "Ipswich Cyber", "West Brom Cyber", "Norwich Cyber", "Nottingham Forest Cyber"
+        ],
+        "avg_goals": 2.8,
+        "duration_min": 8
+    },
+    {
+        "name": "FC 26. Spain Championship",
+        "flag": "🇪🇸",
+        "format_tag": "SIM",
+        "game_format": "FC 26. Simulation 11v11 (8 min)",
+        "teams": [
+            "Real Madrid Cyber", "Barcelona Cyber", "Atletico Madrid Cyber",
+            "Sevilla Cyber", "Real Sociedad Cyber", "Real Betis Cyber", "Valencia Cyber", "Villarreal Cyber", "Athletic Bilbao Cyber"
+        ],
+        "avg_goals": 2.8,
+        "duration_min": 8
+    },
+    {
+        "name": "FC 26. Italy Championship",
+        "flag": "🇮🇹",
+        "format_tag": "SIM",
+        "game_format": "FC 26. Simulation 11v11 (8 min)",
+        "teams": [
+            "Inter Milan Cyber", "Juventus Cyber", "AC Milan Cyber",
+            "Napoli Cyber", "AS Roma Cyber", "Lazio Cyber", "Atalanta Cyber", "Fiorentina Cyber"
+        ],
+        "avg_goals": 2.6,
         "duration_min": 8
     },
     {
@@ -114,97 +140,102 @@ EXACT_BOOKMAKER_COMPETITIONS = [
         "duration_min": 8
     },
     {
-        "name": "FC 26. Germany Championship",
-        "flag": "🇩🇪",
+        "name": "FC 26. Championnat du monde",
+        "flag": "🌍",
         "format_tag": "SIM",
         "game_format": "FC 26. Simulation 11v11 (8 min)",
         "teams": [
-            "Bayern Munich Cyber", "Borussia Dortmund Cyber", "Bayer Leverkusen Cyber",
-            "RB Leipzig Cyber", "VfB Stuttgart Cyber", "Eintracht Frankfurt Cyber"
+            "France Cyber", "Brazil Cyber", "Argentina Cyber",
+            "England Cyber", "Germany Cyber", "Spain Cyber",
+            "Portugal Cyber", "Italy Cyber", "Netherlands Cyber", "Belgium Cyber"
         ],
-        "avg_goals": 3.3,
-        "duration_min": 8
-    },
-    {
-        "name": "FC 26. Italy Championship",
-        "flag": "🇮🇹",
-        "format_tag": "SIM",
-        "game_format": "FC 26. Simulation 11v11 (8 min)",
-        "teams": [
-            "Inter Milan Cyber", "Juventus Cyber", "AC Milan Cyber",
-            "Napoli Cyber", "AS Roma Cyber", "Lazio Cyber", "Atalanta Cyber"
-        ],
-        "avg_goals": 2.6,
-        "duration_min": 8
-    },
-    {
-        "name": "FC 26. Spain Championship",
-        "flag": "🇪🇸",
-        "format_tag": "SIM",
-        "game_format": "FC 26. Simulation 11v11 (8 min)",
-        "teams": [
-            "Real Madrid Cyber", "Barcelona Cyber", "Atletico Madrid Cyber",
-            "Sevilla Cyber", "Real Sociedad Cyber", "Real Betis Cyber", "Valencia Cyber"
-        ],
-        "avg_goals": 2.8,
+        "avg_goals": 2.9,
         "duration_min": 8
     }
 ]
 
 TEAM_STRENGTHS = {
-    "Real Madrid Cyber": (1.35, 0.85),
-    "Manchester City Cyber": (1.40, 0.80),
-    "Bayern Munich Cyber": (1.30, 0.90),
-    "Paris SG Cyber": (1.25, 0.95),
-    "Liverpool Cyber": (1.22, 0.94),
-    "Barcelona Cyber": (1.18, 0.98),
-    "Arsenal Cyber": (1.15, 1.00),
-    "Inter Milan Cyber": (1.10, 1.02),
-    "Juventus Cyber": (1.05, 1.05),
-    "Chelsea Cyber": (1.02, 1.08),
-    "Manchester United Cyber": (1.00, 1.10),
-    "Borussia Dortmund Cyber": (1.08, 1.10),
-    "Atletico Madrid Cyber": (0.95, 0.92),
-    "Tottenham Cyber": (1.04, 1.06),
-    "Bayer Leverkusen Cyber": (1.12, 1.02),
-    "AC Milan Cyber": (1.02, 1.04),
-    "Napoli Cyber": (1.06, 1.03),
-    "AS Roma Cyber": (0.98, 1.05),
-    "Lazio Cyber": (0.96, 1.06),
-    "Atalanta Cyber": (1.04, 1.08),
-    "Sevilla Cyber": (0.94, 1.08),
-    "Real Sociedad Cyber": (0.95, 1.02),
-    "Real Betis Cyber": (0.93, 1.07),
-    "Newcastle Cyber": (0.98, 1.05),
-    "Aston Villa Cyber": (1.00, 1.04),
-    "RB Leipzig Cyber": (1.02, 1.06),
-    "Leeds Cyber": (0.88, 1.12),
-    "Leicester Cyber": (0.90, 1.10),
-    "Southampton Cyber": (0.85, 1.15),
-    "Ipswich Cyber": (0.82, 1.18),
-    "West Brom Cyber": (0.80, 1.20),
-    "Norwich Cyber": (0.82, 1.18),
-    "Nottingham Forest Cyber": (0.86, 1.14),
-    "Fiorentina Cyber": (0.92, 1.08),
-    "Porto Cyber": (0.98, 1.04),
-    "Ajax Cyber": (0.96, 1.06),
-    "Lyon Cyber": (0.94, 1.08),
-    "Gent Cyber": (0.84, 1.15),
-    "Panathinaikos Cyber": (0.82, 1.18),
-    "Olympiakos Cyber": (0.86, 1.14),
-    "France Cyber": (1.35, 0.85),
-    "Brazil Cyber": (1.38, 0.88),
-    "Argentina Cyber": (1.32, 0.86),
-    "England Cyber": (1.25, 0.90),
-    "Germany Cyber": (1.20, 0.94),
-    "Spain Cyber": (1.18, 0.95),
-    "Portugal Cyber": (1.16, 0.96),
-    "Italy Cyber": (1.10, 1.00),
-    "Netherlands Cyber": (1.12, 0.98),
-    "Belgium Cyber": (1.08, 1.02)
+    # Germany Bundesliga
+    "Bayern Munich Cyber": (1.42, 0.82),
+    "Borussia Dortmund Cyber": (1.28, 0.95),
+    "Bayer Leverkusen Cyber": (1.30, 0.90),
+    "RB Leipzig Cyber": (1.22, 0.96),
+    "VfB Stuttgart Cyber": (1.18, 0.98),
+    "Eintracht Frankfurt Cyber": (1.14, 1.02),
+    "VfL Wolfsburg Cyber": (1.05, 1.05),
+    "Werder Bremen Cyber": (1.02, 1.08),
+    "Borussia Monchengladbach Cyber": (1.04, 1.07),
+    "SC Freiburg Cyber": (1.06, 1.04),
+    "Union Berlin Cyber": (0.95, 1.02),
+    "1. FC Koln Cyber": (0.96, 1.10),
+    "TSG Hoffenheim Cyber": (1.08, 1.14),
+    "FC Augsburg Cyber": (0.92, 1.12),
+    "FSV Mainz 05 Cyber": (0.90, 1.10),
+    "Schalke 04 Cyber": (0.94, 1.15),
+
+    # Spain
+    "Real Madrid Cyber": (1.45, 0.80),
+    "Barcelona Cyber": (1.35, 0.88),
+    "Atletico Madrid Cyber": (1.15, 0.85),
+    "Sevilla Cyber": (1.02, 1.05),
+    "Real Sociedad Cyber": (1.08, 0.98),
+    "Real Betis Cyber": (1.05, 1.04),
+    "Valencia Cyber": (0.98, 1.08),
+    "Villarreal Cyber": (1.10, 1.02),
+    "Athletic Bilbao Cyber": (1.08, 0.96),
+
+    # England
+    "Manchester City Cyber": (1.48, 0.78),
+    "Liverpool Cyber": (1.38, 0.84),
+    "Arsenal Cyber": (1.35, 0.86),
+    "Chelsea Cyber": (1.20, 0.98),
+    "Manchester United Cyber": (1.15, 1.04),
+    "Tottenham Cyber": (1.18, 1.02),
+    "Newcastle Cyber": (1.14, 1.00),
+    "Aston Villa Cyber": (1.16, 0.98),
+    "West Ham Cyber": (1.02, 1.06),
+    "Brighton Cyber": (1.06, 1.04),
+    "Leeds Cyber": (0.92, 1.10),
+    "Leicester Cyber": (0.94, 1.08),
+    "Southampton Cyber": (0.88, 1.14),
+    "Ipswich Cyber": (0.85, 1.16),
+    "West Brom Cyber": (0.84, 1.18),
+    "Norwich Cyber": (0.86, 1.15),
+    "Nottingham Forest Cyber": (0.90, 1.12),
+
+    # Italy
+    "Inter Milan Cyber": (1.36, 0.84),
+    "Juventus Cyber": (1.24, 0.90),
+    "AC Milan Cyber": (1.22, 0.94),
+    "Napoli Cyber": (1.26, 0.92),
+    "AS Roma Cyber": (1.12, 1.00),
+    "Lazio Cyber": (1.10, 1.02),
+    "Atalanta Cyber": (1.25, 1.05),
+    "Fiorentina Cyber": (1.05, 1.04),
+
+    # France / Portugal / Rest of Europe
+    "Paris SG Cyber": (1.40, 0.86),
+    "Porto Cyber": (1.08, 1.00),
+    "Ajax Cyber": (1.06, 1.04),
+    "Lyon Cyber": (1.04, 1.06),
+    "Gent Cyber": (0.88, 1.12),
+    "Panathinaikos Cyber": (0.86, 1.14),
+    "Olympiakos Cyber": (0.90, 1.10),
+
+    # Nations
+    "France Cyber": (1.42, 0.82),
+    "Brazil Cyber": (1.44, 0.84),
+    "Argentina Cyber": (1.38, 0.85),
+    "England Cyber": (1.32, 0.88),
+    "Germany Cyber": (1.28, 0.90),
+    "Spain Cyber": (1.26, 0.92),
+    "Portugal Cyber": (1.24, 0.94),
+    "Italy Cyber": (1.18, 0.96),
+    "Netherlands Cyber": (1.20, 0.95),
+    "Belgium Cyber": (1.15, 0.98)
 }
 
-def seed_database(total_historical: int = 330, upcoming_count: int = 33):
+def seed_database(total_historical: int = 352, upcoming_count: int = 44):
     init_db()
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -221,11 +252,10 @@ def seed_database(total_historical: int = 330, upcoming_count: int = 33):
     all_historical = []
     matches_to_insert = []
 
-    # 1. Historical Matches for all 11 exact competitions
     num_comps = len(EXACT_BOOKMAKER_COMPETITIONS)
     for i in range(total_historical):
         comp_cfg = EXACT_BOOKMAKER_COMPETITIONS[i % num_comps]
-        match_time = base_time + timedelta(minutes=i * 24)
+        match_time = base_time + timedelta(minutes=i * 22)
         bookmaker = random.choice(BOOKMAKERS)
         
         home_team, away_team = random.sample(comp_cfg["teams"], 2)
@@ -303,10 +333,10 @@ def seed_database(total_historical: int = 330, upcoming_count: int = 33):
 
     # Insert Historical Predictions
     preds_to_insert = []
-    for idx, target in enumerate(all_historical[-100:]):
+    for idx, target in enumerate(all_historical[-120:]):
         odds_dict = {"1": target["odds_1"], "x": target["odds_x"], "2": target["odds_2"]}
         pred = ensemble.generate_prediction(
-            matches_history=all_historical[:150],
+            matches_history=all_historical[:180],
             home_team=target["home_team"],
             away_team=target["away_team"],
             bookmaker=target["bookmaker"],
@@ -381,11 +411,11 @@ def seed_database(total_historical: int = 330, upcoming_count: int = 33):
     ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, preds_to_insert)
 
-    # 3. Live & Upcoming Matches for EACH of the 11 competitions
+    # 3. Live & Upcoming Matches for EACH of the 11 competitions (including 4 matches for Germany)
     sched_matches = []
     sched_preds = []
 
-    # 3 to 4 LIVE matches
+    # 4 LIVE matches + 40 Upcoming matches
     for j in range(upcoming_count):
         comp_cfg = EXACT_BOOKMAKER_COMPETITIONS[j % num_comps]
         
@@ -398,8 +428,7 @@ def seed_database(total_historical: int = 330, upcoming_count: int = 33):
             ht_as = as_
         else:
             status = "SCHEDULED"
-            # Next matches spaced chronologically (in 4 min, 8 min, 12 min, 16 min...)
-            up_time = now + timedelta(minutes=(j - 3) * 6 + random.randint(1, 3))
+            up_time = now + timedelta(minutes=(j - 3) * 5 + random.randint(1, 3))
             hs, as_, ht_hs, ht_as = None, None, None, None
 
         bookmaker = random.choice(BOOKMAKERS)
@@ -505,10 +534,10 @@ def seed_database(total_historical: int = 330, upcoming_count: int = 33):
     INSERT INTO model_versions (
         version, deployed_at, is_active, trained_on_matches,
         brier_score_val, accuracy_1x2, accuracy_over25, accuracy_btts, notes
-    ) VALUES (?, ?, 1, ?, 0.174, 0.692, 0.724, 0.708, ?)
+    ) VALUES (?, ?, 1, ?, 0.174, 0.694, 0.725, 0.710, ?)
     """, (
-        "v2.6.2-prod", now.isoformat(), len(all_historical),
-        "Multi-Tournament Engine: 11 Authentic Bookmaker Competitions with Poisson & Logistic Regression"
+        "v2.6.3-prod", now.isoformat(), len(all_historical),
+        "Multi-Tournament Engine: 11 Authentic Bookmaker Competitions with Complete Bundesliga Roster"
     ))
 
     # 5. Insert Drift Alerts
@@ -517,15 +546,15 @@ def seed_database(total_historical: int = 330, upcoming_count: int = 33):
         timestamp, bookmaker, competition, metric_name,
         baseline_value, recent_value, sample_size, p_value,
         confidence_level, status, description
-    ) VALUES (?, '1xBet', 'FC 26. 5x5 Rush. Superligue', 'Over 5.5 Goals Frequency',
-        0.72, 0.84, 50, 0.029, '95%', 'ACTIVE',
-        'Forte sur-représentation de buts observée sur la Superligue 5x5 Rush.'
+    ) VALUES (?, '1xBet', 'FC 26. Germany Championship', 'Home Win Rate',
+        0.44, 0.52, 45, 0.041, '95%', 'ACTIVE',
+        'Légère hausse de lavantage domicile observée en Bundesliga Cyber.'
     )
     """, (now.isoformat(),))
 
     conn.commit()
     conn.close()
-    print("Database seeding complete with all 11 exact bookmaker competitions!")
+    print("Database seeding complete with full German club roster!")
 
 if __name__ == "__main__":
     seed_database()
