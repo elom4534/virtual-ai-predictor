@@ -78,6 +78,14 @@ def startup_event():
     init_db()
     collector_daemon.init_collection_db()
     matches = get_all_matches_from_db()
+    if not matches or len(matches) < 10:
+        print("Empty or small database detected - auto-seeding multi-format matches...")
+        try:
+            from seed_data import seed_database
+            seed_database(total_historical=240, upcoming_count=24)
+            matches = get_all_matches_from_db()
+        except Exception as e:
+            print("Auto-seed error:", e)
     if matches:
         ensemble_predictor.ml_engine.train_on_history(matches)
 
