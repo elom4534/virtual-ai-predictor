@@ -82,12 +82,18 @@ def startup_event():
         print("Empty or small database detected - auto-seeding multi-format matches...")
         try:
             from seed_data import seed_database
-            seed_database(total_historical=240, upcoming_count=24)
+            seed_database(total_historical=352, upcoming_count=44)
             matches = get_all_matches_from_db()
         except Exception as e:
             print("Auto-seed error:", e)
     if matches:
         ensemble_predictor.ml_engine.train_on_history(matches)
+    
+    # Ingest real live 1xBet / BetWinner matches
+    try:
+        collector_daemon.sync_real_live_feed_into_app(force=True, ensemble_model=ensemble_predictor)
+    except Exception as e:
+        print("Live feed sync on startup error:", e)
 
 @app.get("/api/status")
 def get_system_status():
@@ -211,6 +217,12 @@ def list_matches(
     limit: int = 100,
     offset: int = 0
 ):
+    # Auto-sync live feed (throttled every 15s)
+    try:
+        collector_daemon.sync_real_live_feed_into_app(force=False, ensemble_model=ensemble_predictor)
+    except Exception:
+        pass
+
     conn = get_db_connection()
     cursor = conn.cursor()
 
@@ -634,9 +646,31 @@ def record_match_manual(match_data: MatchCreateRequest):
 
 @app.post("/api/data/sync-feed")
 def sync_live_feed():
+    res = collector_daemon.sync_real_live_feed_into_app(force=True, ensemble_model=ensemble_predictor)
     collector_daemon.sync_fifa_matches_cycle()
-    export_real_data.export_all()
-    return {"status": "SUCCESS", "synced_at": datetime.now(timezone.utc).isoformat()}
+    try:
+        export_real_data.export_all()
+    except Exception:
+        pass
+    return {
+        "status": "SUCCESS",
+        "synced_at": datetime.now(timezone.utc).isoformat(),
+        "live_feed": res
+    }
+
+@app.post("/api/collector/sync")
+def trigger_collector_sync():
+    res = collector_daemon.sync_real_live_feed_into_app(force=True, ensemble_model=ensemble_predictor)
+    collector_daemon.sync_fifa_matches_cycle()
+    try:
+        export_real_data.export_all()
+    except Exception:
+        pass
+    return {
+        "status": "SUCCESS",
+        "synced_at": datetime.now(timezone.utc).isoformat(),
+        "live_feed": res
+    }
 
 @app.post("/api/models/retrain")
 def retrain_models():
