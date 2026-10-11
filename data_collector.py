@@ -8,28 +8,36 @@ from typing import List, Dict, Any, Optional, Tuple
 import sqlite3
 from database import get_db_connection
 
+COMPETITIONS = [
+    "FC 26. 5x5 Rush. Superligue",
+    "FC 24. 4x4. Championnat d'Angleterre",
+    "FC 25. 3x3. Ligue de conférence",
+    "FC 26. England Championship",
+    "FC 26. Champions League",
+    "FC 26. Championnat du monde",
+    "England. Premier League. Simulation",
+    "FC 25. Ligue européenne",
+    "FC 26. Germany Championship",
+    "FC 26. Italy Championship",
+    "FC 26. Spain Championship"
+]
+
+BOOKMAKERS = ["1xBet", "BetWinner", "MegaPari"]
+
 CYBER_TEAMS = [
     "Real Madrid Cyber", "Manchester City Cyber", "Bayern Munich Cyber", 
     "Paris SG Cyber", "Barcelona Cyber", "Liverpool Cyber", 
     "Arsenal Cyber", "Inter Milan Cyber", "Juventus Cyber", 
-    "Chelsea Cyber", "Borussia Dortmund Cyber", "Atletico Madrid Cyber",
+    "Chelsea Cyber", "Manchester United Cyber", "Borussia Dortmund Cyber", 
+    "Atletico Madrid Cyber", "Tottenham Cyber", "Bayer Leverkusen Cyber",
+    "AC Milan Cyber", "Napoli Cyber", "AS Roma Cyber", "Lazio Cyber", "Atalanta Cyber",
+    "Sevilla Cyber", "Real Sociedad Cyber", "Real Betis Cyber", "Newcastle Cyber", "Aston Villa Cyber",
+    "Leeds Cyber", "Leicester Cyber", "Southampton Cyber", "Ipswich Cyber", "West Brom Cyber", "Norwich Cyber",
+    "Fiorentina Cyber", "Porto Cyber", "Ajax Cyber", "Lyon Cyber",
     "France Cyber", "Brazil Cyber", "Argentina Cyber", 
     "England Cyber", "Germany Cyber", "Spain Cyber", 
-    "Portugal Cyber", "Italy Cyber"
+    "Portugal Cyber", "Italy Cyber", "Netherlands Cyber", "Belgium Cyber"
 ]
-
-COMPETITIONS = [
-    "EsportsBattle Champions League (8 min)",
-    "FIFA 24 Cyber Premier League (2x4 min)",
-    "FIFA Cyber World Cup (8 min)",
-    "FIFA 24 Cyber Rush 4x4 (3x2 min)",
-    "FIFA Liga Pro 5x5 (2x3 min)",
-    "FIFA 24 Cyber Penalty Shootout",
-    "eFootball 2024 Cyber Open Cup (2x5 min)",
-    "PES Cyber Masters League (10 min)"
-]
-
-BOOKMAKERS = ["1xBet", "BetWinner", "MegaPari"]
 
 def generate_match_hash(home_team: str, away_team: str, match_time: str, bookmaker: str) -> str:
     """Generates deterministic hash to prevent match duplicates."""
@@ -37,10 +45,6 @@ def generate_match_hash(home_team: str, away_team: str, match_time: str, bookmak
     return hashlib.md5(raw.encode()).hexdigest()
 
 def validate_match_data(match_dict: Dict[str, Any]) -> Tuple[bool, Optional[str]]:
-    """
-    Validates logical integrity of match record.
-    Checks score coherence, required fields and timestamps.
-    """
     required = ["bookmaker", "home_team", "away_team", "match_time"]
     for r in required:
         if not match_dict.get(r):
@@ -65,7 +69,6 @@ def validate_match_data(match_dict: Dict[str, Any]) -> Tuple[bool, Optional[str]
     return True, None
 
 def insert_or_update_match(match_dict: Dict[str, Any]) -> Tuple[bool, str]:
-    """Inserts or updates match record in database."""
     is_valid, err = validate_match_data(match_dict)
     if not is_valid:
         return False, f"Validation échouée : {err}"
@@ -102,8 +105,8 @@ def insert_or_update_match(match_dict: Dict[str, Any]) -> Tuple[bool, str]:
     """, (
         match_id,
         match_dict["bookmaker"],
-        match_dict.get("game_format", "FIFA Simulation 11v11 (8 min)"),
-        match_dict.get("competition", "FIFA Cyber League"),
+        match_dict.get("game_format", "Simulation 11v11 (8 min)"),
+        match_dict.get("competition", "FC 26. Champions League"),
         match_dict["home_team"],
         match_dict["away_team"],
         match_dict["match_time"],
@@ -130,7 +133,6 @@ def insert_or_update_match(match_dict: Dict[str, Any]) -> Tuple[bool, str]:
     return True, match_id
 
 def import_csv_content(csv_text: str) -> Dict[str, Any]:
-    """Parses CSV text and batch inserts/updates matches."""
     reader = csv.DictReader(io.StringIO(csv_text))
     inserted = 0
     rejected = 0
@@ -141,8 +143,8 @@ def import_csv_content(csv_text: str) -> Dict[str, Any]:
             m_dict = {
                 "id": row.get("id"),
                 "bookmaker": row.get("bookmaker", "1xBet"),
-                "game_format": row.get("game_format", "FIFA Simulation 11v11 (8 min)"),
-                "competition": row.get("competition", "FIFA Cyber League"),
+                "game_format": row.get("game_format", "Simulation 11v11 (8 min)"),
+                "competition": row.get("competition", "FC 26. Champions League"),
                 "home_team": row.get("home_team"),
                 "away_team": row.get("away_team"),
                 "match_time": row.get("match_time", datetime.now(timezone.utc).isoformat()),

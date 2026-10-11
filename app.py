@@ -145,16 +145,62 @@ def get_system_status():
         }
     }
 
-def classify_game_format(game_fmt: str, comp: str) -> tuple[str, str]:
+def classify_game_format(game_fmt: str, comp: str) -> tuple[str, str, str]:
     text = f"{game_fmt or ''} {comp or ''}".lower()
-    if any(k in text for k in ["rush", "4x4", "5x5", "3x3"]):
-        return "RUSH", "FIFA Rush 4x4 & 5x5"
-    elif any(k in text for k in ["penalty", "shootout", "tir"]):
-        return "PENALTY", "Tirs au But (Penalties)"
-    elif any(k in text for k in ["pes", "efootball"]):
-        return "PES", "eFootball / PES Cyber (10 min)"
+    if "superligue" in text or "5x5" in text:
+        return "RUSH_5X5", "FC 26 Rush 5x5", "🌍"
+    elif "4x4" in text:
+        return "RUSH_4X4", "FC 24 Rush 4x4", "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+    elif "3x3" in text or "conférence" in text:
+        return "CYBER_3X3", "FC 25 3x3 Conférence", "🇪🇺"
+    elif "world" in text or "monde" in text:
+        return "SIM_WORLD", "FC 26 Mondial", "🌍"
+    elif "champions league" in text:
+        return "SIM_UCL", "FC 26 Champions League", "🇪🇺"
+    elif "premier league" in text:
+        return "SIM_EPL", "Premier League Simulation", "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+    elif "england" in text:
+        return "SIM_ENG", "FC 26 England Champ.", "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+    elif "germany" in text:
+        return "SIM_GER", "FC 26 Germany", "🇩🇪"
+    elif "italy" in text:
+        return "SIM_ITA", "FC 26 Italy", "🇮🇹"
+    elif "spain" in text:
+        return "SIM_ESP", "FC 26 Spain", "🇪🇸"
+    elif "européenne" in text or "europa" in text:
+        return "SIM_EUROPA", "FC 25 Ligue Européenne", "🇪🇺"
     else:
-        return "SIM", "FIFA Simulation (8 min)"
+        return "SIM", "Simulation 11v11", "🎮"
+
+@app.get("/api/competitions")
+def get_all_competitions():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("""
+        SELECT competition, 
+               COUNT(*) as total_matches,
+               SUM(CASE WHEN status = 'LIVE' THEN 1 ELSE 0 END) as live_count,
+               SUM(CASE WHEN status = 'SCHEDULED' THEN 1 ELSE 0 END) as upcoming_count
+        FROM matches
+        GROUP BY competition
+        ORDER BY live_count DESC, upcoming_count DESC
+    """)
+    rows = cursor.fetchall()
+    conn.close()
+    
+    result = []
+    for r in rows:
+        tag, display, flag = classify_game_format("", r["competition"])
+        result.append({
+            "competition": r["competition"],
+            "flag": flag,
+            "display_name": display,
+            "format_tag": tag,
+            "total_matches": r["total_matches"],
+            "live_count": r["live_count"] or 0,
+            "upcoming_count": r["upcoming_count"] or 0
+        })
+    return {"competitions": result}
 
 @app.get("/api/matches")
 def list_matches(
@@ -190,23 +236,19 @@ def list_matches(
             query += " AND m.status = ?"
             params.append(status)
 
-    if bookmaker:
+    if bookmaker and bookmaker != "ALL":
         query += " AND m.bookmaker = ?"
         params.append(bookmaker)
 
-    if competition:
+    if competition and competition != "ALL":
         query += " AND m.competition = ?"
         params.append(competition)
 
     if format and format != "ALL":
         if format == "RUSH":
-            query += " AND (m.game_format LIKE '%Rush%' OR m.competition LIKE '%4x4%' OR m.competition LIKE '%5x5%')"
-        elif format == "PENALTY":
-            query += " AND (m.game_format LIKE '%Penalt%' OR m.competition LIKE '%Shootout%')"
-        elif format == "PES":
-            query += " AND (m.game_format LIKE '%PES%' OR m.competition LIKE '%eFootball%')"
+            query += " AND (m.game_format LIKE '%Rush%' OR m.competition LIKE '%Rush%' OR m.competition LIKE '%4x4%' OR m.competition LIKE '%5x5%' OR m.competition LIKE '%3x3%')"
         elif format == "SIM":
-            query += " AND (m.game_format LIKE '%Sim%' OR m.competition LIKE '%8 min%' OR m.competition LIKE '%Volta%')"
+            query += " AND (m.game_format LIKE '%Simulation%' OR m.competition LIKE '%Simulation%' OR m.competition LIKE '%Championship%' OR m.competition LIKE '%Champions League%' OR m.competition LIKE '%monde%' OR m.competition LIKE '%européenne%')"
 
     query += """
     ORDER BY 
@@ -232,9 +274,10 @@ def list_matches(
         d = dict(r)
         d["home_logo_url"] = get_team_logo(d["home_team"])
         d["away_logo_url"] = get_team_logo(d["away_team"])
-        tag, display_name = classify_game_format(d.get("game_format", ""), d.get("competition", ""))
+        tag, display_name, flag = classify_game_format(d.get("game_format", ""), d.get("competition", ""))
         d["format_tag"] = tag
         d["format_display_name"] = display_name
+        d["competition_flag"] = flag
         if d.get("top_exact_scores"):
             try: d["top_exact_scores"] = json.loads(d["top_exact_scores"])
             except Exception: pass
