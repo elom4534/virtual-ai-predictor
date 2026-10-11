@@ -137,12 +137,24 @@ def get_system_status():
         }
     }
 
+def classify_game_format(game_fmt: str, comp: str) -> tuple[str, str]:
+    text = f"{game_fmt or ''} {comp or ''}".lower()
+    if any(k in text for k in ["rush", "4x4", "5x5", "3x3"]):
+        return "RUSH", "FIFA Rush 4x4 & 5x5"
+    elif any(k in text for k in ["penalty", "shootout", "tir"]):
+        return "PENALTY", "Tirs au But (Penalties)"
+    elif any(k in text for k in ["pes", "efootball"]):
+        return "PES", "eFootball / PES Cyber (10 min)"
+    else:
+        return "SIM", "FIFA Simulation (8 min)"
+
 @app.get("/api/matches")
 def list_matches(
     status: Optional[str] = None,
     bookmaker: Optional[str] = None,
     competition: Optional[str] = None,
-    limit: int = 50,
+    format: Optional[str] = None,
+    limit: int = 100,
     offset: int = 0
 ):
     conn = get_db_connection()
@@ -178,11 +190,29 @@ def list_matches(
         query += " AND m.competition = ?"
         params.append(competition)
 
-    if status in ["SCHEDULED", "LIVE", "UPCOMING"]:
-        query += " ORDER BY m.match_time ASC LIMIT ? OFFSET ?"
-    else:
-        query += " ORDER BY m.match_time DESC LIMIT ? OFFSET ?"
+    if format and format != "ALL":
+        if format == "RUSH":
+            query += " AND (m.game_format LIKE '%Rush%' OR m.competition LIKE '%4x4%' OR m.competition LIKE '%5x5%')"
+        elif format == "PENALTY":
+            query += " AND (m.game_format LIKE '%Penalt%' OR m.competition LIKE '%Shootout%')"
+        elif format == "PES":
+            query += " AND (m.game_format LIKE '%PES%' OR m.competition LIKE '%eFootball%')"
+        elif format == "SIM":
+            query += " AND (m.game_format LIKE '%Sim%' OR m.competition LIKE '%8 min%' OR m.competition LIKE '%Volta%')"
 
+    query += """
+    ORDER BY 
+        CASE 
+            WHEN m.status = 'LIVE' THEN 1 
+            WHEN m.status = 'SCHEDULED' THEN 2 
+            ELSE 3 
+        END ASC,
+        CASE 
+            WHEN m.status = 'SCHEDULED' THEN m.match_time 
+        END ASC,
+        m.match_time DESC
+    LIMIT ? OFFSET ?
+    """
     params.extend([limit, offset])
 
     cursor.execute(query, params)
@@ -194,6 +224,9 @@ def list_matches(
         d = dict(r)
         d["home_logo_url"] = get_team_logo(d["home_team"])
         d["away_logo_url"] = get_team_logo(d["away_team"])
+        tag, display_name = classify_game_format(d.get("game_format", ""), d.get("competition", ""))
+        d["format_tag"] = tag
+        d["format_display_name"] = display_name
         if d.get("top_exact_scores"):
             try: d["top_exact_scores"] = json.loads(d["top_exact_scores"])
             except Exception: pass
