@@ -1,3 +1,4 @@
+from backtest_engine import evaluate_market_selection
 import random
 from datetime import datetime, timezone, timedelta
 import json
@@ -353,12 +354,13 @@ def seed_database():
         act_1x2 = "1" if hs > as_ else ("2" if as_ > hs else "X")
 
         main_pick = pred["main_pick"]
-        is_hit = False
-        if "1" in main_pick["selection"] and act_1x2 == "1": is_hit = True
-        elif "2" in main_pick["selection"] and act_1x2 == "2": is_hit = True
-        elif "Plus de 2.5" in main_pick["selection"] and (hs + as_) > 2.5: is_hit = True
-        elif "Moins de 2.5" in main_pick["selection"] and (hs + as_) <= 2.5: is_hit = True
-        elif "marquent" in main_pick["selection"] and (hs > 0 and as_ > 0): is_hit = True
+        eval_res = evaluate_market_selection(main_pick.get("market"), main_pick["selection"], hs, as_)
+        if eval_res is True:
+            eval_status = "HIT"
+        elif eval_res is False:
+            eval_status = "MISS"
+        else:
+            eval_status = "EXCLUDED"
 
         preds_to_insert.append((
             f"pred_hist_{idx}",
@@ -391,7 +393,7 @@ def seed_database():
             json.dumps(pred["sub_models"]["poisson"]),
             json.dumps(pred["sub_models"]["trend"]),
             json.dumps(pred["sub_models"]["ml"]),
-            "HIT" if is_hit else "MISS"
+            eval_status
         ))
 
     # 3. Generate 1 LIVE match + 7 UPCOMING scheduled matches for EACH of the 11 competitions (88 total upcoming)
