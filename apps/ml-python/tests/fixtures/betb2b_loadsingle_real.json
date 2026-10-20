@@ -1,0 +1,576 @@
+{
+ "_meta": {
+  "source": "GET /datafeed/prematch/api/v2/sportevents?Ref=192&Lng=en&SportIds=1",
+  "captured_at": "2026-10-20T14:31:09Z",
+  "note": "Échantillon réel (3 événements) — BetB2B LoadSingle v2"
+ },
+ "response": {
+  "count": 3,
+  "items": [
+   {
+    "oddsLocalization": [
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "-185",
+       "3": "1.54"
+      },
+      "type": 1,
+      "parameter": 0.0,
+      "oddsMarket": 1.54,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "W1"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "+388",
+       "3": "4.875"
+      },
+      "type": 2,
+      "parameter": 0.0,
+      "oddsMarket": 4.875,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "X"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "+521",
+       "3": "6.21"
+      },
+      "type": 3,
+      "parameter": 0.0,
+      "oddsMarket": 6.21,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "W2"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "+130",
+       "3": "2.296"
+      },
+      "type": 7,
+      "parameter": -1.5,
+      "oddsMarket": 2.296,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Handicap 1 (-1.5)"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "-138",
+       "3": "1.725"
+      },
+      "type": 8,
+      "parameter": 1.5,
+      "oddsMarket": 1.725,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Handicap 2 (1.5)"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "+114",
+       "3": "2.137"
+      },
+      "type": 9,
+      "parameter": 3.5,
+      "oddsMarket": 2.137,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Total Over (3.5)"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "-121",
+       "3": "1.827"
+      },
+      "type": 10,
+      "parameter": 3.5,
+      "oddsMarket": 1.827,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Total Under (3.5)"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "+166",
+       "3": "2.657"
+      },
+      "type": 6,
+      "parameter": 0,
+      "oddsMarket": 2.657,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "2X"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "-459",
+       "3": "1.218"
+      },
+      "type": 5,
+      "parameter": 0,
+      "oddsMarket": 1.218,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "12"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "-641",
+       "3": "1.156"
+      },
+      "type": 4,
+      "parameter": 0,
+      "oddsMarket": 1.156,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "1X"
+     }
+    ],
+    "tournamentImage": [
+     "86b3049b3592a71249e7cc77927822d4.png"
+    ],
+    "opponent1Ids": [
+     5020
+    ],
+    "opponent2Ids": [
+     2488
+    ],
+    "hasVideo": false,
+    "waitingLive": true,
+    "matchInfoObject": {
+     "tournamentStage": "League phase. Tour 3",
+     "location": "Sukru Saracoglu (Istanbul)"
+    },
+    "stadiumInfoObject": {
+     "id": 433,
+     "name": "Sukru Saracoglu (Istanbul)",
+     "locationAdress": "Recep Peker Caddesi, Kadıkoy"
+    },
+    "statGameId": "6a93e1097762417de844e0d5",
+    "hasInsights": false,
+    "sportEventId": 761648014,
+    "mainConstSportEventId": 379871568,
+    "constSportEventId": 379871568,
+    "tournamentId": 118587,
+    "sportId": 1,
+    "subSportId": 0,
+    "tournamentNameLocalization": "UEFA Champions League",
+    "opponent1NameLocalization": "Fenerbahce",
+    "opponent2NameLocalization": "Slavia Prague",
+    "hasNoOpponents": false,
+    "imageOpponent1": [
+     "4b0b41c2fe6a1c2f6a35efc5bd4a41bc.PNG"
+    ],
+    "imageOpponent2": [
+     "28e829e40808ec01a5550e7a0f1cdda0.png"
+    ],
+    "type": 1,
+    "vid": 1,
+    "period": 0,
+    "periodName": "",
+    "startDate": 1792514700,
+    "link": "https://megapari.com/en/line/Football/118587-UEFA-Champions-League/379871568-Fenerbahce-Slavia-Prague"
+   },
+   {
+    "oddsLocalization": [
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "+885",
+       "3": "9.85"
+      },
+      "type": 1,
+      "parameter": 0.0,
+      "oddsMarket": 9.85,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "W1"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "+514",
+       "3": "6.14"
+      },
+      "type": 2,
+      "parameter": 0.0,
+      "oddsMarket": 6.14,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "X"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "-302",
+       "3": "1.331"
+      },
+      "type": 3,
+      "parameter": 0.0,
+      "oddsMarket": 1.331,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "W2"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "+107",
+       "3": "2.073"
+      },
+      "type": 7,
+      "parameter": 1.5,
+      "oddsMarket": 2.073,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Handicap 1 (1.5)"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "-114",
+       "3": "1.876"
+      },
+      "type": 8,
+      "parameter": -1.5,
+      "oddsMarket": 1.876,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Handicap 2 (-1.5)"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "+121",
+       "3": "2.205"
+      },
+      "type": 9,
+      "parameter": 3.5,
+      "oddsMarket": 2.205,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Total Over (3.5)"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "-128",
+       "3": "1.78"
+      },
+      "type": 10,
+      "parameter": 3.5,
+      "oddsMarket": 1.78,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Total Under (3.5)"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "-1389",
+       "3": "1.072"
+      },
+      "type": 6,
+      "parameter": 0,
+      "oddsMarket": 1.072,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "2X"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "-629",
+       "3": "1.159"
+      },
+      "type": 5,
+      "parameter": 0,
+      "oddsMarket": 1.159,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "12"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "+264",
+       "3": "3.64"
+      },
+      "type": 4,
+      "parameter": 0,
+      "oddsMarket": 3.64,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "1X"
+     }
+    ],
+    "tournamentImage": [
+     "86b3049b3592a71249e7cc77927822d4.png"
+    ],
+    "opponent1Ids": [
+     963907
+    ],
+    "opponent2Ids": [
+     19297
+    ],
+    "hasVideo": false,
+    "waitingLive": true,
+    "matchInfoObject": {
+     "tournamentStage": "League phase. Tour 3",
+     "location": "Baku Olympic Stadium (Baku)"
+    },
+    "stadiumInfoObject": {
+     "id": 683,
+     "name": "Baku Olympic Stadium (Baku)",
+     "locationAdress": "Heydar Aliyev"
+    },
+    "statGameId": "6a93e1097762417de844e0d2",
+    "hasInsights": false,
+    "sportEventId": 761648922,
+    "mainConstSportEventId": 379872446,
+    "constSportEventId": 379872446,
+    "tournamentId": 118587,
+    "sportId": 1,
+    "subSportId": 0,
+    "tournamentNameLocalization": "UEFA Champions League",
+    "opponent1NameLocalization": "Sabah Baku",
+    "opponent2NameLocalization": "Borussia Dortmund",
+    "hasNoOpponents": false,
+    "imageOpponent1": [
+     "35261e4195007a899e8d872a4dfeabb6.png"
+    ],
+    "imageOpponent2": [
+     "2c00163238eb3b254debbc851815b59a.PNG"
+    ],
+    "type": 1,
+    "vid": 1,
+    "period": 0,
+    "periodName": "",
+    "startDate": 1792514700,
+    "link": "https://megapari.com/en/line/Football/118587-UEFA-Champions-League/379872446-Sabah-Baku-Borussia-Dortmund"
+   },
+   {
+    "oddsLocalization": [
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "+153",
+       "3": "2.525"
+      },
+      "type": 1,
+      "parameter": 0.0,
+      "oddsMarket": 2.525,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "W1"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "+351",
+       "3": "4.51"
+      },
+      "type": 2,
+      "parameter": 0.0,
+      "oddsMarket": 4.51,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "X"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "+152",
+       "3": "2.515"
+      },
+      "type": 3,
+      "parameter": 0.0,
+      "oddsMarket": 2.515,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "W2"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "-103",
+       "3": "1.97"
+      },
+      "type": 7,
+      "parameter": 0.0,
+      "oddsMarket": 1.97,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Handicap 1 (0)"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "-103",
+       "3": "1.97"
+      },
+      "type": 8,
+      "parameter": 0.0,
+      "oddsMarket": 1.97,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Handicap 2 (0)"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "+124",
+       "3": "2.235"
+      },
+      "type": 9,
+      "parameter": 4.5,
+      "oddsMarket": 2.235,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Total Over (4.5)"
+     },
+     {
+      "isCenter": true,
+      "oddsMarketView": {
+       "2": "-131",
+       "3": "1.761"
+      },
+      "type": 10,
+      "parameter": 4.5,
+      "oddsMarket": 1.761,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "Total Under (4.5)"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "-170",
+       "3": "1.588"
+      },
+      "type": 6,
+      "parameter": 0,
+      "oddsMarket": 1.588,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "2X"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "-410",
+       "3": "1.244"
+      },
+      "type": 5,
+      "parameter": 0,
+      "oddsMarket": 1.244,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "12"
+     },
+     {
+      "isCenter": false,
+      "oddsMarketView": {
+       "2": "-169",
+       "3": "1.592"
+      },
+      "type": 4,
+      "parameter": 0,
+      "oddsMarket": 1.592,
+      "playerId": 0,
+      "playerName": "",
+      "isBlocked": false,
+      "display": "1X"
+     }
+    ],
+    "tournamentImage": [
+     "86b3049b3592a71249e7cc77927822d4.png"
+    ],
+    "opponent1Ids": [
+     5280
+    ],
+    "opponent2Ids": [
+     3442
+    ],
+    "hasVideo": false,
+    "waitingLive": true,
+    "matchInfoObject": {
+     "tournamentStage": "League phase. Tour 3",
+     "location": "Parc des Princes (Paris)"
+    },
+    "stadiumInfoObject": {
+     "id": 658,
+     "name": "Parc des Princes (Paris)",
+     "locationAdress": "24, rue du Commandant Guilbaud"
+    },
+    "statGameId": "6a93e10b7762417de844e0f0",
+    "hasInsights": false,
+    "sportEventId": 761648577,
+    "mainConstSportEventId": 379871572,
+    "constSportEventId": 379871572,
+    "tournamentId": 118587,
+    "sportId": 1,
+    "subSportId": 0,
+    "tournamentNameLocalization": "UEFA Champions League",
+    "opponent1NameLocalization": "Paris Saint-Germain",
+    "opponent2NameLocalization": "Barcelona",
+    "hasNoOpponents": false,
+    "imageOpponent1": [
+     "5280.png"
+    ],
+    "imageOpponent2": [
+     "3442.png"
+    ],
+    "type": 1,
+    "vid": 1,
+    "period": 0,
+    "periodName": "",
+    "startDate": 1792522800,
+    "link": "https://megapari.com/en/line/Football/118587-UEFA-Champions-League/379871572-Paris-Saint-Germain-Barcelona"
+   }
+  ]
+ }
+}

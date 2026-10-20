@@ -1,0 +1,24 @@
+# Dépendances de PRODUCTION pour Alwaysdata (Python 3.12)
+# Différence avec requirements.txt : pas de pytest/ruff (dev), pas de catboost/lightgbm
+# (imports optionnels gardés par HAS_CATBOOST / HAS_LIGHTGBM -> fallback sklearn).
+# Gain disque : ~120 Mo sur l'offre gratuite.
+#
+# IMPORTANT : numpy/pandas/scikit-learn/scipy ci-dessous n'ont PAS de wheels
+# pour Python 3.13. Le site Python Alwaysdata doit être en 3.11 ou 3.12,
+# sinon pip compile depuis les sources (très long, échoue souvent).
+
+fastapi==0.110.2
+uvicorn[standard]==0.29.0
+pydantic==2.7.1
+pydantic-settings==2.3.4
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2
+scipy==1.13.0
+httpx==0.27.0
+requests==2.32.3
+redis==5.0.4
+sqlalchemy[asyncio]==2.0.30
+asyncpg==0.29.0
+alembic==1.13.1
+python-multipart==0.0.9

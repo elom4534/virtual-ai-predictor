@@ -1,0 +1,200 @@
+{
+ "_meta": {
+  "date": "2026-10-20",
+  "key_index": 3,
+  "credits_remaining": 497,
+  "captured_at": "2026-10-20T14:30:27Z"
+ },
+ "data": {
+  "date": "2026-10-20",
+  "language": "en",
+  "timezone": "UTC",
+  "matches": [
+   {
+    "id": "eu66morqll9azlh7wz79uckr8",
+    "league": {
+     "id": "civf31q1inxohs4a03y8reetf",
+     "name": "Primera División",
+     "country": "Costa Rica"
+    },
+    "week": "Apertura",
+    "kickoff": "00:00",
+    "status": {
+     "status": "finished",
+     "display": "FT",
+     "is_live": false,
+     "state": "postGame"
+    },
+    "home": {
+     "id": "hoj9ha89lpyzhr4lv54rlebr",
+     "name": "SP. San José",
+     "logo": "https://live-football-api.com/teams/hoj9ha89lpyzhr4lv54rlebr.png",
+     "score": "3"
+    },
+    "away": {
+     "id": "8gsjo8rs9cfipedjwhdmg1g0q",
+     "name": "San Carlos",
+     "logo": "https://live-football-api.com/teams/8gsjo8rs9cfipedjwhdmg1g0q.png",
+     "score": "3"
+    },
+    "halftime": {
+     "home": 3,
+     "away": 1
+    },
+    "tv_broadcast": false,
+    "penalty": {
+     "home": null,
+     "away": null
+    }
+   },
+   {
+    "id": "cy9j6cnb6zxkql0o3tz0i71n8",
+    "league": {
+     "id": "7ut48s80k421xixh6ev5i6h62",
+     "name": "Liga MX Femenil",
+     "country": "Mexico"
+    },
+    "week": "Apertura",
+    "kickoff": "00:00",
+    "status": {
+     "status": "finished",
+     "display": "FT",
+     "is_live": false,
+     "state": "postGame"
+    },
+    "home": {
+     "id": "d4roblxk51drf8vfu33hiafe2",
+     "name": "Toluca",
+     "logo": "https://live-football-api.com/teams/d4roblxk51drf8vfu33hiafe2.png",
+     "score": "0"
+    },
+    "away": {
+     "id": "8tuzabejd8udb2alutp6eiezu",
+     "name": "Santos Laguna",
+     "logo": "https://live-football-api.com/teams/8tuzabejd8udb2alutp6eiezu.png",
+     "score": "0"
+    },
+    "halftime": {
+     "home": 0,
+     "away": 0
+    },
+    "tv_broadcast": false,
+    "penalty": {
+     "home": null,
+     "away": null
+    }
+   },
+   {
+    "id": "7ks24rfl0ts57lwzp4ijzzrpw",
+    "league": {
+     "id": "avrpx5lanaaxagr4h4duxj3vc",
+     "name": "CONMEBOL Libertadores Femenina",
+     "country": "South America"
+    },
+    "week": null,
+    "kickoff": "00:00",
+    "status": {
+     "status": "finished",
+     "display": "FT",
+     "is_live": false,
+     "state": "postGame"
+    },
+    "home": {
+     "id": "a7ysr5farsrxfcad61gnn5vqt",
+     "name": "LDU Quito",
+     "logo": "https://live-football-api.com/teams/a7ysr5farsrxfcad61gnn5vqt.png",
+     "score": "0"
+    },
+    "away": {
+     "id": "6j80cbtdofxx8ef5o3ilfgvf8",
+     "name": "Olimpia",
+     "logo": "https://live-football-api.com/teams/6j80cbtdofxx8ef5o3ilfgvf8.png",
+     "score": "1"
+    },
+    "halftime": {
+     "home": 0,
+     "away": 0
+    },
+    "tv_broadcast": false,
+    "penalty": {
+     "home": null,
+     "away": null
+    }
+   },
+   {
+    "id": "tk5xn0ri18s9pou0ss9ixmhg",
+    "league": {
+     "id": "avrpx5lanaaxagr4h4duxj3vc",
+     "name": "CONMEBOL Libertadores Femenina",
+     "country": "South America"
+    },
+    "week": null,
+    "kickoff": "00:00",
+    "status": {
+     "status": "finished",
+     "display": "FT",
+     "is_live": false,
+     "state": "postGame"
+    },
+    "home": {
+     "id": "9z36qu8oio39spvoabj42l3bo",
+     "name": "Libertad",
+     "logo": "https://live-football-api.com/teams/9z36qu8oio39spvoabj42l3bo.png",
+     "score": "2"
+    },
+    "away": {
+     "id": "3m4mhj7a5c6gzyug4pvtz1edw",
+     "name": "U. de Chile",
+     "logo": "https://live-football-api.com/teams/3m4mhj7a5c6gzyug4pvtz1edw.png",
+     "score": "1"
+    },
+    "halftime": {
+     "home": 2,
+     "away": 0
+    },
+    "tv_broadcast": false,
+    "penalty": {
+     "home": null,
+     "away": null
+    }
+   },
+   {
+    "id": "935y9y101r3tugtk5velzm13o",
+    "league": {
+     "id": "2hsidwomhjsaaytdy9u5niyi4",
+     "name": "Liga MX",
+     "country": "Mexico"
+    },
+    "week": "Apertura",
+    "kickoff": "00:07",
+    "status": {
+     "status": "scheduled",
+     "display": "00:07",
+     "is_live": false,
+     "state": "preGame"
+    },
+    "home": {
+     "id": "e603sojy77s4u0ypqds2v2a1g",
+     "name": "Guadalajara",
+     "logo": "https://live-football-api.com/teams/e603sojy77s4u0ypqds2v2a1g.png",
+     "score": null
+    },
+    "away": {
+     "id": "b7hn6knkuxbpj1i8rmzapns7b",
+     "name": "Necaxa",
+     "logo": "https://live-football-api.com/teams/b7hn6knkuxbpj1i8rmzapns7b.png",
+     "score": null
+    },
+    "halftime": {
+     "home": null,
+     "away": null
+    },
+    "tv_broadcast": false,
+    "penalty": {
+     "home": null,
+     "away": null
+    }
+   }
+  ]
+ }
+}

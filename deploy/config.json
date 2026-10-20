@@ -1,0 +1,64 @@
+{
+  "account": "god",
+  "api_token": null,
+  "api_token_env": "ALWAYSDATA_API_TOKEN",
+
+  "ssh": {
+    "host": "ssh-god.alwaysdata.net",
+    "user": "god",
+    "key_path": null,
+    "key_path_env": "ALWAYSDATA_SSH_KEY",
+    "password": null,
+    "password_env": "ALWAYSDATA_SSH_PASSWORD",
+    "timeout": 900
+  },
+
+  "source_dir": "/home/user/app",
+
+  "remote_dir": "/home/god/pred-app",
+  "site_root": "/home/god",
+
+  "push": [
+    { "source": ".", "remote": "/home/god/pred-app" }
+  ],
+
+  "sites": [
+    {
+      "id": null,
+      "type": "user_program",
+      "name": "god",
+      "path": "/home/god",
+      "addresses": ["god.alwaysdata.net"],
+      "environment": "PYTHONUNBUFFERED=1 NODE_ENV=production ML_PYTHON_URL=http://127.0.0.1:8100",
+      "ssl_force": false,
+      "max_idle_time": 0,
+      "command": "uvicorn main:app --port $PORT --host $IP --proxy-headers --forwarded-allow-ips ::1",
+      "working_directory": "/home/god",
+      "note": "Site déjà créé dans le panel Alwaysdata ; l'edge FastAPI sert l'API et relaie /api/v1 vers NestJS (127.0.0.1:3000)."
+    }
+  ],
+
+  "managed_services": {
+    "postgresql": {
+      "host": "postgresql-god.alwaysdata.net",
+      "port": 5432,
+      "database": "god_app",
+      "user": "god",
+      "note": "Base existante (PostgreSQL 17) — les migrations du dépôt doivent y être appliquées."
+    },
+    "redis": {
+      "host": "127.0.0.1",
+      "port": 6380,
+      "note": "Aucun Redis managé ni service actif sur ce plan (ports 6380/8300-8499 fermés) → le cache Redis est désactivé, l'application reste opérationnelle en mode dégradé (fail-closed côté marge)."
+    }
+  },
+
+  "install_command": "bash /home/god/pred-app/deploy/install.sh all",
+
+  "exclude": [
+    ".git", "node_modules", ".venv", "venv", "__pycache__", ".env",
+    "dist", "build", ".DS_Store", ".next", "vendor", ".pytest_cache",
+    "apps/client-flutter/build", "apps/client-flutter/.dart_tool",
+    "coverage", ".ruff_cache", ".mypy_cache"
+  ]
+}

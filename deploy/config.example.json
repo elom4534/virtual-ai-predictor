@@ -1,0 +1,56 @@
+{
+  "account": "elogededivo05417042",
+  "api_token": null,
+  "api_token_env": "ALWAYSDATA_API_TOKEN",
+
+  "ssh": {
+    "host": "ssh-elogededivo05417042.alwaysdata.net",
+    "user": "elogededivo05417042",
+    "key_path": null,
+    "key_path_env": "ALWAYSDATA_SSH_KEY",
+    "password": null,
+    "password_env": "ALWAYSDATA_SSH_PASSWORD",
+    "timeout": 300
+  },
+
+  "source_dir": "/home/user/app",
+
+  "sites": [
+    {
+      "id": null,
+      "type": "nodejs",
+      "name": "pred-api",
+      "path": "/sites/pred-api",
+      "addresses": ["elogededivo05417042-pred-api.alwaysdata.net"],
+      "environment": "NODE_ENV=production ML_PYTHON_URL=http://127.0.0.1:8200",
+      "ssl_force": false,
+      "max_idle_time": 0,
+      "command": "node dist/main.js",
+      "working_directory": "/sites/pred-api",
+      "source_subdir": "apps/api-node"
+    },
+    {
+      "id": null,
+      "type": "user_program",
+      "name": "pred-ml",
+      "path": "/sites/pred-ml",
+      "addresses": ["elogededivo05417042-pred-ml.alwaysdata.net"],
+      "environment": "PYTHONUNBUFFERED=1",
+      "ssl_force": false,
+      "max_idle_time": 0,
+      "command": ".venv/bin/uvicorn app.main:app --host :: --port $PORT",
+      "working_directory": "/sites/pred-ml",
+      "source_subdir": "apps/ml-python"
+    }
+  ],
+
+  "remote_dir": "/home/elogededivo05417042/pred-app",
+  "install_command": "bash /home/elogededivo05417042/pred-app/deploy/install.sh all",
+
+  "exclude": [
+    ".git", "node_modules", ".venv", "venv", "__pycache__", ".env",
+    "dist", "build", ".DS_Store", ".next", "vendor", ".pytest_cache",
+    "apps/client-flutter/build", "apps/client-flutter/.dart_tool",
+    "coverage", ".ruff_cache", ".mypy_cache"
+  ]
+}

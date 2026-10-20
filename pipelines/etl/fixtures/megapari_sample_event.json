@@ -1,0 +1,630 @@
+{
+  "_meta": {
+    "provider": "MEGAPARI",
+    "ref": 192,
+    "game_id": 763075482,
+    "captured_at": "2026-10-20T14:30:24Z",
+    "source": "GET /datafeed/loadlist/prematch/api/v1/GetMarketsGame?ref=192&gameId=...",
+    "note": "Payload réel capturé pour calibrer le normalizer (§15 du PROMPT MAÎTRE V2)"
+  },
+  "event": {
+    "hasInsights": false,
+    "sportEventId": 763075482,
+    "mainConstSportEventId": 379871602,
+    "constSportEventId": 380312142,
+    "tournamentId": 118587,
+    "sportId": 1,
+    "subSportId": 0,
+    "tournamentNameLocalizations": {
+      "en": "UEFA Champions League"
+    },
+    "opponent1NameLocalizations": {
+      "en": "Manchester City"
+    },
+    "opponent2NameLocalizations": {
+      "en": "AEK Athens"
+    },
+    "imageOpponent1": [
+      "57060f6368da70fbdfff37cb4b0280a5.png"
+    ],
+    "imageOpponent2": [
+      "548f2189d34f659047f3158a58033e04.png"
+    ],
+    "tournamentImage": [
+      "86b3049b3592a71249e7cc77927822d4.png"
+    ],
+    "type": 53,
+    "vid": 1,
+    "period": 0,
+    "periodNames": {
+      "en": ""
+    },
+    "startDate": 1792522800,
+    "weightTop": 0,
+    "link": "https://megapari.com/ru/line/Football/118587-UEFA-Champions-League/380312142-Manchester-City-AEK-Athens",
+    "hasVideo": false,
+    "matchInfoObjectLocalizations": {
+      "en": {
+        "tournamentStage": "League phase. Tour 3",
+        "location": "Etihad (Manchester)"
+      }
+    }
+  },
+  "markets_payload": {
+    "count": 52,
+    "items": [
+      {
+        "type": 1,
+        "parameter": 0.0,
+        "oddsMarket": 18,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "W1"
+        }
+      },
+      {
+        "type": 2,
+        "parameter": 0.0,
+        "oddsMarket": 15.5,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "X"
+        }
+      },
+      {
+        "type": 3,
+        "parameter": 0.0,
+        "oddsMarket": 1.01,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "W2"
+        }
+      },
+      {
+        "type": 4,
+        "parameter": 0.0,
+        "oddsMarket": 11,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "1X"
+        }
+      },
+      {
+        "type": 5,
+        "parameter": 0.0,
+        "oddsMarket": 1.001,
+        "playerId": 0,
+        "isBlocked": true,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "12"
+        }
+      },
+      {
+        "type": 6,
+        "parameter": 0.0,
+        "oddsMarket": 1.05,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "2X"
+        }
+      },
+      {
+        "type": 7,
+        "parameter": 3.5,
+        "oddsMarket": 3.4,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 1 (3.5)"
+        }
+      },
+      {
+        "type": 7,
+        "parameter": 4.5,
+        "oddsMarket": 2.55,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 1 (4.5)"
+        }
+      },
+      {
+        "type": 7,
+        "parameter": 5.5,
+        "oddsMarket": 2.02,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 1 (5.5)"
+        }
+      },
+      {
+        "type": 7,
+        "parameter": 6.0,
+        "oddsMarket": 1.85,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 1 (6)"
+        }
+      },
+      {
+        "type": 7,
+        "parameter": 6.5,
+        "oddsMarket": 1.67,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 1 (6.5)"
+        }
+      },
+      {
+        "type": 7,
+        "parameter": 7.5,
+        "oddsMarket": 1.43,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 1 (7.5)"
+        }
+      },
+      {
+        "type": 7,
+        "parameter": 8.5,
+        "oddsMarket": 1.27,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 1 (8.5)"
+        }
+      },
+      {
+        "type": 7,
+        "parameter": 9.5,
+        "oddsMarket": 1.25,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 1 (9.5)"
+        }
+      },
+      {
+        "type": 8,
+        "parameter": -9.5,
+        "oddsMarket": 3.2,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 2 (-9.5)"
+        }
+      },
+      {
+        "type": 8,
+        "parameter": -8.5,
+        "oddsMarket": 3.2,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 2 (-8.5)"
+        }
+      },
+      {
+        "type": 8,
+        "parameter": -7.5,
+        "oddsMarket": 2.5,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 2 (-7.5)"
+        }
+      },
+      {
+        "type": 8,
+        "parameter": -6.5,
+        "oddsMarket": 2.02,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 2 (-6.5)"
+        }
+      },
+      {
+        "type": 8,
+        "parameter": -6.0,
+        "oddsMarket": 1.85,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 2 (-6)"
+        }
+      },
+      {
+        "type": 8,
+        "parameter": -5.5,
+        "oddsMarket": 1.67,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 2 (-5.5)"
+        }
+      },
+      {
+        "type": 8,
+        "parameter": -4.5,
+        "oddsMarket": 1.41,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 2 (-4.5)"
+        }
+      },
+      {
+        "type": 8,
+        "parameter": -3.5,
+        "oddsMarket": 1.24,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Handicap 2 (-3.5)"
+        }
+      },
+      {
+        "type": 9,
+        "parameter": 11.5,
+        "oddsMarket": 1.18,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Over (11.5)"
+        }
+      },
+      {
+        "type": 9,
+        "parameter": 12.5,
+        "oddsMarket": 1.31,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Over (12.5)"
+        }
+      },
+      {
+        "type": 9,
+        "parameter": 13.5,
+        "oddsMarket": 1.47,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Over (13.5)"
+        }
+      },
+      {
+        "type": 9,
+        "parameter": 14.5,
+        "oddsMarket": 1.69,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Over (14.5)"
+        }
+      },
+      {
+        "type": 9,
+        "parameter": 15.5,
+        "oddsMarket": 2.03,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Over (15.5)"
+        }
+      },
+      {
+        "type": 9,
+        "parameter": 16.5,
+        "oddsMarket": 2.43,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Over (16.5)"
+        }
+      },
+      {
+        "type": 9,
+        "parameter": 17.5,
+        "oddsMarket": 3,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Over (17.5)"
+        }
+      },
+      {
+        "type": 9,
+        "parameter": 18.5,
+        "oddsMarket": 3.75,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Over (18.5)"
+        }
+      },
+      {
+        "type": 10,
+        "parameter": 11.5,
+        "oddsMarket": 3.9,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Under (11.5)"
+        }
+      },
+      {
+        "type": 10,
+        "parameter": 12.5,
+        "oddsMarket": 3,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Under (12.5)"
+        }
+      },
+      {
+        "type": 10,
+        "parameter": 13.5,
+        "oddsMarket": 2.4,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Under (13.5)"
+        }
+      },
+      {
+        "type": 10,
+        "parameter": 14.5,
+        "oddsMarket": 2,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Under (14.5)"
+        }
+      },
+      {
+        "type": 10,
+        "parameter": 15.5,
+        "oddsMarket": 1.7,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Under (15.5)"
+        }
+      },
+      {
+        "type": 10,
+        "parameter": 16.5,
+        "oddsMarket": 1.45,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Under (16.5)"
+        }
+      },
+      {
+        "type": 10,
+        "parameter": 17.5,
+        "oddsMarket": 1.3,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Under (17.5)"
+        }
+      },
+      {
+        "type": 10,
+        "parameter": 18.5,
+        "oddsMarket": 1.18,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Under (18.5)"
+        }
+      },
+      {
+        "type": 11,
+        "parameter": 3.5,
+        "oddsMarket": 1.4,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 1 Over (3.5)"
+        }
+      },
+      {
+        "type": 11,
+        "parameter": 4.5,
+        "oddsMarket": 1.79,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 1 Over (4.5)"
+        }
+      },
+      {
+        "type": 11,
+        "parameter": 5.5,
+        "oddsMarket": 2.5,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 1 Over (5.5)"
+        }
+      },
+      {
+        "type": 12,
+        "parameter": 3.5,
+        "oddsMarket": 2.6,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 1 Under (3.5)"
+        }
+      },
+      {
+        "type": 12,
+        "parameter": 4.5,
+        "oddsMarket": 1.87,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 1 Under (4.5)"
+        }
+      },
+      {
+        "type": 12,
+        "parameter": 5.5,
+        "oddsMarket": 1.43,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 1 Under (5.5)"
+        }
+      },
+      {
+        "type": 13,
+        "parameter": 9.5,
+        "oddsMarket": 1.59,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 2 Over (9.5)"
+        }
+      },
+      {
+        "type": 13,
+        "parameter": 10.5,
+        "oddsMarket": 1.93,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 2 Over (10.5)"
+        }
+      },
+      {
+        "type": 13,
+        "parameter": 11.5,
+        "oddsMarket": 2.43,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 2 Over (11.5)"
+        }
+      },
+      {
+        "type": 14,
+        "parameter": 9.5,
+        "oddsMarket": 2.14,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 2 Under (9.5)"
+        }
+      },
+      {
+        "type": 14,
+        "parameter": 10.5,
+        "oddsMarket": 1.74,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 2 Under (10.5)"
+        }
+      },
+      {
+        "type": 14,
+        "parameter": 11.5,
+        "oddsMarket": 1.45,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Individual Total 2 Under (11.5)"
+        }
+      },
+      {
+        "type": 182,
+        "parameter": 0.0,
+        "oddsMarket": 1.9,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Even - Yes"
+        }
+      },
+      {
+        "type": 183,
+        "parameter": 0.0,
+        "oddsMarket": 1.9,
+        "playerId": 0,
+        "isBlocked": false,
+        "playerMultiName": {},
+        "displayMulti": {
+          "en": "Total Even - No"
+        }
+      }
+    ]
+  }
+}
